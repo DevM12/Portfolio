@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import BrickCard from "../components/BrickCard";
 import { motion } from "framer-motion";
-import bricks from '../data/bricks.json'
 import { useEffect, useState } from "react";
 
 export default function Temple() {
