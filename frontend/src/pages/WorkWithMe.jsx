@@ -229,19 +229,32 @@ export default function WorkWithMe() {
     };
 
     const services = [
-        { name: "Frontend Dev with React + Tailwind", icon: "⚛️" },
-        { name: "Framer Motion Animations", icon: "🎭" },
-        { name: "Portfolio & Landing Page Builds", icon: "🏗️" },
-        { name: "Temple-themed Creative Design", icon: "🏛️" }
+        { name: "Custom landing pages / websites",icon:"" },
+        { name: "Framer Motion Animations", icon: "" },
+        { name: "Portfolio as a service", icon: "" },
+        { name: "AI-Powered tools", icon: "" },
+        { name: "Site fix and optimization", icon: "" },
+        { name: "Personal chatbots", icon: "" },
     ];
 
     const tools = [
-        { name: "React", icon: "⚛️" },
-        { name: "Tailwind", icon: "🎨" },
-        { name: "Framer Motion", icon: "🎭" },
-        { name: "Vite", icon: "⚡" },
-        { name: "Figma", icon: "🎯" },
-        { name: "GitHub", icon: "🐙" }
+        { name: "JavaScript", icon: "" },
+        { name: "React", icon: "" },
+        { name: "Redux", icon: "" },
+        { name: "TypeScript", icon: "" },
+        { name: "Node.js", icon: "" },
+        { name: "Express.js", icon: "" },
+        { name: "RESTful APIs", icon: "" },
+        { name: "MongoDB", icon: "" },
+        { name: "Git & GitHub", icon: "" },
+        { name: "AJAX", icon: "" },
+        { name: "Authentication", icon: "" },
+        { name: "BootStrap", icon: "" },
+        { name: "Tailwind", icon: "" },
+        { name: "Framer Motion", icon: "" },
+        { name: "Responsive Design", icon: "" },
+        { name: "Render", icon: "" },
+        { name: "Vercel", icon: "" }
     ];
 
     return (
