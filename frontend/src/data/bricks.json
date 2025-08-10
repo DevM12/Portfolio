@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Project Shiva",
+        "description": "A sacred React app",
+        "tech": "React, Tailwind",
+        "link": "https://example.com/project-shiva"
+    },
+    {
+        "id": 2,
+        "title": "Golden Brick",
+        "description": "Tailwind magic",
+        "tech": "Tailwind CSS",
+        "link": "https://example.com/golden-brick"
+    },
+    {
+        "id": 3,
+        "title": "Fire Mashal",
+        "description": "Animation experiments",
+        "tech": "Framer Motion",
+        "link": "https://example.com/fire-mashal"
+    }
+]
