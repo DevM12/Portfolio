@@ -2,19 +2,22 @@ import { Link } from "react-router-dom";
 import BrickCard from "../components/BrickCard";
 import { motion } from "framer-motion";
 import bricks from '../data/bricks.json'
+import { useEffect, useState } from "react";
 
 export default function Temple() {
 
-    const sampleBricks = [
-        { id: 1, title: "Sacred Calculator", description: "A mystical tool for divine mathematics and spiritual calculations that bridges the gap between logic and intuition", tech: "React + Math.js" },
-        { id: 2, title: "Meditation Timer", description: "Track your journey to enlightenment with precise timing and ambient soundscapes for deeper practice", tech: "JavaScript + Audio" },
-        { id: 3, title: "Mantra Counter", description: "Digital prayer beads for the modern devotee, tracking repetitions with sacred vibrations", tech: "React State" },
-        { id: 4, title: "Chakra Visualizer", description: "Interactive energy center alignment tool with real-time feedback and guided healing sessions", tech: "CSS + SVG + WebGL" },
-        { id: 5, title: "Digital Yantra", description: "Sacred geometric patterns for focus and meditation, dynamically generated for personal alignment", tech: "Canvas API + Math" },
-        { id: 6, title: "Wisdom Archive", description: "Curated collection of ancient texts, modern insights, and timeless wisdom from spiritual traditions", tech: "Database + Search" },
-        { id: 7, title: "Karma Tracker", description: "Monitor your positive actions and their ripple effects through the digital universe", tech: "Local Storage + Analytics" },
-        { id: 8, title: "Digital Shrine", description: "Personal altar space for daily offerings, prayers, and spiritual reflection in the cloud", tech: "Cloud Storage + Auth" }
-    ];
+    const [repos, setRepos] = useState([]);
+    const username = 'DevM12';
+
+    useEffect(() => {
+        fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+            .then((res) => res.json())
+            .then((data) => setRepos(data))
+            .catch(console.error);
+    }, []);
+
+
+    
 
     return (
         <div className="min-h-screen pt-24 pb-12 px-6 relative z-10">
@@ -60,7 +63,7 @@ export default function Temple() {
                         transition={{ delay: 0.5 }}
                     >
                         <div>
-                            <div className="text-3xl font-bold text-yellow-400">{sampleBricks.length}</div>
+                            <div className="text-3xl font-bold text-yellow-400">{repos.length}</div>
                             <div className="text-yellow-300/70 text-sm">Sacred Bricks</div>
                         </div>
                         <div className="w-px h-12 bg-yellow-400/30"></div>
@@ -78,8 +81,15 @@ export default function Temple() {
 
                 {/* Bricks Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
-                    {sampleBricks.map((brick, index) => (
-                        <BrickCard key={brick.id} {...brick} index={index} />
+                    {repos.map((brick, index) => (
+                        <BrickCard
+                            key={brick.id}
+                            title={brick.name}                   
+                            description={brick.description}
+                            tech={brick.language||'N/A'} 
+                            link={brick.html_url}
+                            index={index}
+                        />
                     ))}
                 </div>
 

@@ -17,7 +17,7 @@
             >
                 <h2 className="text-2xl font-semibold">{title}</h2>
                 <p className="mt-2 text-sm font-light">{description}</p>
-                <p className="mt-3 text-xs font-mono italic text-yellow-200">Tech: {tech || "N/A"}</p>
+                <p className="mt-3 text-xs font-mono italic text-yellow-200">Tech: {tech }</p>
             </motion.a>
         );
     }
